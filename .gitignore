@@ -6,5 +6,5 @@
 *.dll
 *.o
 *.so
-# *.docx
-# *.pdf
+*.docx
+*.pdf
