@@ -1,0 +1,1 @@
+appendeing text from file 2 , ahh pointer came here
