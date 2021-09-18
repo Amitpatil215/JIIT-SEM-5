@@ -1,6 +1,3 @@
-from typing import Dict
-
-
 lines = open("OpenSourceLab/assign-3/VendingItems.txt", "r").read().split('\n')
 product = {}
 for eachItem in lines:
