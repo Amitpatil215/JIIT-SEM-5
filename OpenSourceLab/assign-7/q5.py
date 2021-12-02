@@ -3,9 +3,8 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 
-iris = pd.read_csv("iris.csv")
-#Drop id column
-iris = iris.drop('Id', axis=1)
+iris = pd.read_csv("OpenSourceLab/assign-7/iris.csv")
+
 X = iris.iloc[:, :-1].values
 y = iris.iloc[:, 4].values
 
@@ -18,3 +17,9 @@ model.fit(X_train, y_train)
 prediction = model.predict(X_test)
 print('The accuracy of the Logistic Regression is',
       metrics.accuracy_score(prediction, y_test))
+
+"""
+
+The accuracy of the Logistic Regression is 0.9333333333333333
+
+"""

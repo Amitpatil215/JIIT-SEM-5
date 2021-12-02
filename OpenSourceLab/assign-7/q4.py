@@ -7,8 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 
 iris = pd.read_csv("OpenSourceLab/assign-7/iris.csv")
-#Drop id column
-iris = iris.drop('Id', axis=1)
+
 X = iris.iloc[:, :-1].values
 y = iris.iloc[:, 4].values
 #Split arrays or matrices into train and test subsets
@@ -30,3 +29,20 @@ for i in list(range(1, 11)):
     prediction = model.predict(X_test)
     a = a.append(pd.Series(metrics.accuracy_score(prediction, y_test)))
 plt.plot(a_index, a)
+plt.show()
+
+"""
+For k = 1 accuracy is 0.9666666666666667
+For k = 2 accuracy is 0.9666666666666667
+For k = 3 accuracy is 0.9666666666666667
+For k = 4 accuracy is 0.9666666666666667
+For k = 5 accuracy is 0.9666666666666667
+For k = 6 accuracy is 0.9666666666666667
+For k = 7 accuracy is 0.9666666666666667
+For k = 8 accuracy is 0.9666666666666667
+For k = 9 accuracy is 0.9666666666666667
+
+Visual presentation: Various values of n for K-Nearest nerighbours:
+PS D:\Work\JIIT\Sem__5\Sem_5>
+
+ """
