@@ -1,7 +1,10 @@
 #Create a simulator object
 set ns [new Simulator]
+
+#Define different colors for data flows
 $ns color 1 Blue
 $ns color 2 Red
+
 #Open the nam trace file
 set nf [open out.nam w]
 $ns namtrace-all $nf
@@ -23,7 +26,7 @@ set n1 [$ns node]
 set n2 [$ns node]
 set n3 [$ns node]
 set n4 [$ns node]
-set n5 [$ns node]
+# set n5 [$ns node]
 
 $n0 shape box
 $n0 color green
@@ -37,12 +40,13 @@ $ns duplex-link $n0 $n1 1Mb 10ms DropTail
 $ns duplex-link $n2 $n0 1Mb 10ms DropTail
 $ns duplex-link $n3 $n0 1Mb 10ms DropTail
 $ns duplex-link $n4 $n0 1Mb 10ms DropTail
-$ns duplex-link $n5 $n0 1Mb 10ms DropTail
+
+# $ns duplex-link $n5 $n0 1Mb 10ms DropTail
 $ns duplex-link-op $n0 $n1 orient left-up
 $ns duplex-link-op $n2 $n0 orient left-down
 $ns duplex-link-op $n0 $n3 orient up
 $ns duplex-link-op $n0 $n4 orient left-down
-$ns duplex-link-op $n0 $n5 orient right-down
+# $ns duplex-link-op $n0 $n5 orient right-down
 
 #Create a TCP agent and attach it to node n0
 set tcp0 [new Agent/TCP]
