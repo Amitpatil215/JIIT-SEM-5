@@ -21,3 +21,4 @@ ax.set_title('Histogram')
 ax.set_xlabel('Word Length')
 ax.set_ylabel('Count')
 plt.show()
+
